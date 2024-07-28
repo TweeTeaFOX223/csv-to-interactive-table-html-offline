@@ -74,9 +74,13 @@ npm run install-pip-requirements
 `./01_input`に変換するCSVファイルを設置して、`./convert.py`のCSVファイルを読み込む部分に相対パスを入れてください。最初の時点では`sample.csv`が入っています。※`sample.csv`はこのサイトで生成しました。  
 https://tm-webtools.com/Tools/TestData    
   
-ITablesの初期設定によって、64KBを超えるCSVはデータがダウンサンプリングされるようになっています。制限を変更したい場合は、下記を参照して、`maxBytes`の値を書き換えてください。最終的なhtmlは元のCSVの2倍ぐらいのサイズになるので、100MBぐらいが限界かもしれないです(未検証)。  
-https://mwouts.github.io/itables/downsampling.html
+~~ITablesの初期設定によって、64KBを超えるCSVはデータがダウンサンプリングされるようになっています。制限を変更したい場合は、下記を参照して、`maxBytes`の値を書き換えてください。 最終的なhtmlは元のCSVの2倍ぐらいのサイズになるので、100MBぐらいが限界かもしれないです(未検証)。~~ 初期値は取り敢えず400MBに設定しました。
+https://mwouts.github.io/itables/downsampling.html  
   
+  
+**Node.jsやChromeで使われてるV8エンジンが、512MB以上の文字列(JavaScriptファイルも含む)を読み込めないとのことでした。加工による容量増加も考慮すると400～450MB辺りのCSVが限界と思われます。**  
+https://qiita.com/mod_poppo/items/f3fcbc673526c84b9387#%E6%96%87%E5%AD%97%E5%88%97%E3%81%AE%E9%95%B7%E3%81%95  
+https://zenn.dev/faycute/scraps/c037099fadc9f3#comment-c2c83119ba7ea9  
 <br>  
   
 ### [2]：Pythonのプログラムを実行

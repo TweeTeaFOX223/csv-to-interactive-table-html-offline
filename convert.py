@@ -12,8 +12,12 @@ from itables import options as it_opt, to_html_datatable
 # ソースコードの変数「UNPKG_DT_BUNDLE_URL」に注目
 # https://github.com/mwouts/itables/blob/main/src/itables/utils.py
 # https://github.com/mwouts/itables/blob/main/src/itables/options.py
-# it_opt.dt_url = "../node_modules/dt_for_itables/dt_bundle.js"
 it_opt.dt_url = "../node_modules/dt_for_itables/dt_bundle.js"
+
+# 　Node.jsやChromeの限界である512MGから少し余裕を持たせて400MBを限界に設定
+# https://qiita.com/mod_poppo/items/f3fcbc673526c84b9387#%E6%96%87%E5%AD%97%E5%88%97%E3%81%AE%E9%95%B7%E3%81%95
+# https://zenn.dev/faycute/scraps/c037099fadc9f3#comment-c2c83119ba7ea9
+it_opt.maxBytes = 419430400
 
 # 読み込みが軽いため取り敢えずpolars
 df = pl.read_csv(
