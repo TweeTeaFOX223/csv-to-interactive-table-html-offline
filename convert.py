@@ -40,5 +40,5 @@ tmp_html = tmp_html.replace(
 )
 
 # Viteのエントリーポイントのhtmlとして保存する
-with open("./02_tmp_html/index.html", mode="w") as f:
+with open("./02_tmp_html/index.html", mode="w", encoding="utf-8") as f:
     f.write(tmp_html)
