@@ -18,7 +18,7 @@ it_opt.dt_url = "../node_modules/dt_for_itables/dt_bundle.js"
 # 読み込みが軽いため取り敢えずpolars
 df = pl.read_csv(
     # ここに変換したいcsvのパスを入力
-    "./01_input_csv/titanic.csv",
+    "./01_input_csv/sample.csv",
     separator=",",
 )
 
