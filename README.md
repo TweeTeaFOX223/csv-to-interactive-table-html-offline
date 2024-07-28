@@ -12,6 +12,7 @@
     - [\[1\]：変換するCSVファイルを用意](#1変換するcsvファイルを用意)
     - [\[2\]：Pythonのプログラムを実行](#2pythonのプログラムを実行)
     - [\[3\]：ビルドで単一HTMLに変換](#3ビルドで単一htmlに変換)
+- [余談：npm-scriptsとPython仮想環境(venv)](#余談npm-scriptsとpython仮想環境venv)
 
 # 概要と機能
 
@@ -97,3 +98,14 @@ npmのスクリプトを実行して、一時HTMLファイルを単一HTMLファ
 npm run build
 npm run preview
 ```
+  
+<br>  
+  
+# 余談：npm-scriptsとPython仮想環境(venv)
+
+Pythonの部分は`poetry`と`taskipy`でやろうと思っていたのですが、1ファイルだけだったのと、下記のものを見て「npmでvenvのアレコレをしたら良さそう」と思って何となくで試してみました。  
+
+- `poetry`のプロジェクトでnpm-scriptsを使用したら良かったという記事を見た。
+https://kimuson.dev/blog/python/python_with_npm_scripts/  
+- VSCodeのPython拡張機能が、`.venv`のディレクトリ内にあるPython実行ファイルのパスを直接指定して動かすコマンドを打っているのを見た。  
+https://zenn.dev/tweeteafox300/scraps/692ccfc673d496
