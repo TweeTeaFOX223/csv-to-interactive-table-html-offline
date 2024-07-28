@@ -18,10 +18,13 @@
 
 入力したCSVファイルを、`ITables`と`vite-plugin-singlefile`を使用して **『インタラクティブな表形式(`Jquery`の`DataTables`)で、CSVのデータを表示する、オフライン環境でも動作可能な単一HTMLファイル』**  に変換するプログラムです(node.jsとpythonを併用)。  
 
-手持ちのCSVファイルをブラウザ上で表示可能なものに変換したい時、CSVファイルを軽量かつ見やすい形式で配布したい時などに使えます。 
-
+手持ちのCSVファイルをブラウザ上で表示可能なものに変換したい時、CSVファイルを軽量かつ見やすい形式で配布したい時などに使えます。  
+  
+DataTablesの公式サイトでインタラクティブな表のサンプルを見ることができます  
+https://datatables.net/
+  
 ITablesの`to_html_datatable`で出力したhtmlをオフライン化する方法のサンプルという面が強いです。このプログラムは`itables==2.1.4`の使用を前提にしています。ITablesにバージョンアップが入り機能が変化したらお役御免になる可能性もあるので注意です。  
-https://mwouts.github.io/itables/html_export.html
+https://mwouts.github.io/itables/html_export.html  
   
 <br>  
   
@@ -105,7 +108,7 @@ npm run preview
 
 Pythonの部分は`poetry`と`taskipy`でやろうと思っていたのですが、1ファイルだけだったのと、下記のものを見て「npmでvenvのアレコレをしたら良さそう」と思って何となくで試してみました。  
 
-- `poetry`のプロジェクトでnpm-scriptsを使用したら良かったという記事を見た。
+- `poetry`のプロジェクトでnpm-scriptsを使用したら良かったという記事を見た。  
 https://kimuson.dev/blog/python/python_with_npm_scripts/  
 - VSCodeのPython拡張機能が、`.venv`のディレクトリ内にあるPython実行ファイルのパスを直接指定して動かすコマンドを打っているのを見た。  
 https://zenn.dev/tweeteafox300/scraps/692ccfc673d496
