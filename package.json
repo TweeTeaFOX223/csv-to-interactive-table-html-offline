@@ -1,0 +1,23 @@
+{
+  "name": "csv-to-interactive-table-html-offline",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "create-venv": "python -m venv .venv",
+    "install-pip": ".venv\\Scripts\\pip.exe install itables polars",
+    "pip-freeze": ".venv\\Scripts\\pip.exe freeze > requirements.txt",
+    "install-pip-freeze": ".venv\\Scripts\\pip.exe install -r requirements.txt",
+    "generate-tmp-html": ".venv\\Scripts\\python.exe convert.py",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.3.4",
+    "vite-plugin-singlefile": "^2.0.2"
+  },
+  "dependencies": {
+    "dt_for_itables": "^2.0.11"
+  }
+}
