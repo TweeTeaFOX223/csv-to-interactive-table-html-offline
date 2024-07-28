@@ -7,7 +7,7 @@
     "create-venv": "python -m venv .venv",
     "install-pip": ".venv\\Scripts\\pip.exe install itables polars",
     "pip-freeze": ".venv\\Scripts\\pip.exe freeze > requirements.txt",
-    "install-pip-freeze": ".venv\\Scripts\\pip.exe install -r requirements.txt",
+    "install-pip-requirements": ".venv\\Scripts\\pip.exe install -r requirements.txt",
     "generate-tmp-html": ".venv\\Scripts\\python.exe convert.py",
     "dev": "vite",
     "build": "vite build",

@@ -61,7 +61,7 @@ npmのスクリプトを実行して、JavaScriptのパッケージインスト�
 ```
 npm install
 npm run create-venv
-npm run install-pip-freeze
+npm run install-pip-requirements
 ```
   
 <br>  
