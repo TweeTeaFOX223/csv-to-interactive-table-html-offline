@@ -11,7 +11,7 @@ export default defineConfig({
 
   build: {
     outDir: outDir,
-    emptyOutDir: true,
+    emptyOutDir: false, //mdや.gitignoreを消さない
   },
 
   plugins: [viteSingleFile()], // This is the plugin 😃
